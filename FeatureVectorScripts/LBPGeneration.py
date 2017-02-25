@@ -1,4 +1,5 @@
 from skimage import feature
+from skimage import io
 import numpy as np
 
 class LBPGeneration:
@@ -7,5 +8,6 @@ class LBPGeneration:
 		self.points = p
 		self.radius = r
 
-	#def start(self, filepath, iter=-1):
+	def start(self, filelist, iter=-1):
+		
 		
