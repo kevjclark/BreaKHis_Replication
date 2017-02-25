@@ -8,6 +8,9 @@ class LBPGeneration:
 		self.points = p
 		self.radius = r
 
-	def start(self, filelist, iter=-1):
-		
+	def start(self, filelist, iter=-1, path):
+		if iter < 0:
+			for f in filelist:
+				image = np.imread((path + filelist), as_grey=True )
+
 		
