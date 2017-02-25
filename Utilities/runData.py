@@ -1,5 +1,5 @@
-import createfilelist
+import createfilelist as cfl
 
 #Change this for running on your local machine
-createfilelist('~/Documents/testImagesV', '~/Documents/Honors/HonorsResults')
+cfl.createflist('/home/taim/Documents/testImageV', '/home/taim/Documents/Honors/HonorsResults/imagefiles.txt')
 print('complete')

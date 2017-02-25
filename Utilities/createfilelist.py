@@ -3,11 +3,11 @@
 
 from os import listdir as listdirec
 
-def createfilelist(pathF, pathT):
+def createflist(pathF, pathT):
 	file_list = listdirec(pathF)
-	filesFile = open(pathT, w)
+	filesFile = open(pathT, 'w')
 	for f in file_list:
 		filesFile.write(f)
+		filesFile.write('\n')
 	filesFile.close()
 
-createfilelist('/home/taim/Documents/testImagesV', '/home/taim/Documents/Honors/HonorsResults')
