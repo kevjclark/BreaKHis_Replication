@@ -8,7 +8,7 @@ class LBPGeneration:
 		#Sets number of points and radious for running of the LBP Algorithm, as provided in scikit-image (skimage)
 		self.points = p
 		self.radius = r
-		self.bins = np.arange(0, 65535+1) #65535 is the max value for 16bit values intensity images
+		self.bins = 65535+1 #65535 is the max value for 16bit values intensity images
 		self.range = range(0, 65535+1)
 
 	def start(self, filelist, iter=-1, path):
@@ -20,7 +20,11 @@ class LBPGeneration:
 				lbp = lbp.ravel()
 				(imhist, _) = np.histogram(lbp, self.bins, self.range, density = True)
 				for i in self.range:
-					resultFile
+					resultFile.write(imhist[i] + " ")
+				resultFile.write('\n')
+
+		resultFile.close()
+		
 
 
 		
