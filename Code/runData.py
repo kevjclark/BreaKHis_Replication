@@ -22,4 +22,5 @@ with open(imFilepath) as f:
 		imlist.append(filepath)
 
 lbpgen = lbp.LBPGeneration(8,2)
+lbpgen.start(imlist, lbpFeaturePath, iter=1)
 print('complete')
