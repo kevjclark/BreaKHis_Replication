@@ -10,7 +10,7 @@ class LBPGeneration:
 		self.bins = 256 #Grey scale intensity
 		self.range = range(0, 255)
 
-	def start(self, filelist, iter=-1, path):
+	def start(self, filelist, path, iter=-1 ):
 		resultFile = open(path, 'w')
 		if iter < 0:
 			for f in filelist:

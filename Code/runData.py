@@ -1,5 +1,5 @@
 import createfilelist as cfl
-import LBPGeneration.py as lbp
+import LBPGeneration as lbp
 from skimage import io
 import matplotlib.pyplot as plt
 from skimage import color
@@ -21,5 +21,5 @@ with open(imFilepath) as f:
 		filepath = filepath.replace('\n', '')
 		imlist.append(filepath)
 
-lbpgen = lbp(8,2)
+lbpgen = lbp.LBPGeneration(8,2)
 print('complete')
